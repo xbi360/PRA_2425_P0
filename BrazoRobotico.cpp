@@ -1,3 +1,4 @@
+#include <iostream>
 #include "BrazoRobotico.h"
 
 // Constructor
@@ -6,19 +7,23 @@ BrazoRobotico::BrazoRobotico(double xi, double yi, double zi)
 
 // Métodos consultores
 double BrazoRobotico::getX() {
-    return x;
+	return x;
 }
 
 double BrazoRobotico::getY(){
-    return y;
+	return y;
 }
 
 double BrazoRobotico::getZ(){
-    return z;
+	return z;
 }
 bool BrazoRobotico::isSujetando(){
-    return sujeto;
+	return sujeto;
 }
+void BrazoRobotico::setSujetando(bool sujeta_do){
+sujeto=sujeta_do;
+}
+
 
 // Método para coger un objeto
 void BrazoRobotico::coger() {
@@ -26,7 +31,7 @@ void BrazoRobotico::coger() {
         sujeto = true;
     } else {
         // Mensaje opcional
-        std::cout << "Ya está sujetando un objeto." << std::endl;
+	    std::cout << "Ya está sujetando un objeto." << std::endl;
     }
 }
 
@@ -36,7 +41,7 @@ void BrazoRobotico::soltar() {
         sujeto = false;
     } else {
         // Mensaje opcional
-        std::cout << "No está sujetando ningún objeto." << std::endl;
+	    std::cout << "No está sujetando ningún objeto." << std::endl;
     }
 }
 

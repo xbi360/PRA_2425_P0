@@ -10,13 +10,14 @@ private :
 	bool sujeto;
 public:
        	
-	BrazoRobotico(double xi,double yi,double zi): x(x_), y(y_), z(z_){};
+	BrazoRobotico(double xi,double yi,double zi);
 	double getX();
 	double getY();
 	double getZ();
-	bool BrazoRobotico::isSujetando();
+	void setSujetando(bool sujeta_do);
+	bool isSujetando();
 	void coger();
 	void soltar();
-	void mover(double xf,yf,zf);
+	void mover(double xf,double yf,double zf);
 };
 #endif // BRAZOROBOTICO_H
