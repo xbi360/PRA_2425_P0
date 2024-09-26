@@ -5,7 +5,7 @@ main.o: main.cpp
 BrazoRobotico.o: BrazoRobotico.cpp BrazoRobotico.h
 	g++ -c BrazoRobotico.cpp
 clean: 
-	rm *.o Robot
+	rm -f.o Robot
 test: 
 	./Robot
 all: Robot 
